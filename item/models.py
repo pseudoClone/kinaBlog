@@ -15,7 +15,6 @@ class Category(models.Model):
 class Item(models.Model):
     category = models.ForeignKey(Category,related_name='item', on_delete=models.CASCADE)
     #On deletion of category whole items in the category will be deleted
-
     image = models.ImageField(upload_to='item_images', blank = True, null = True) # Where on the server to keep the images is upload_to
 
     name = models.CharField(max_length=255)
@@ -30,3 +29,6 @@ class Item(models.Model):
     # If user if deleted, all of their items are also deleted
     # Will soon import User
     created_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
