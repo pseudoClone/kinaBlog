@@ -7,7 +7,7 @@ class Category(models.Model):
     
     class Meta:
         verbose_name_plural = 'Categories'
-        ordering = {'name',} #Order items by name in the admin site
+        ordering = ['name',] #Order items by name in the admin site
     
     def __str__(self):
         return self.name
