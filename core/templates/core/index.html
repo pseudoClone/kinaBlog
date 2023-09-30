@@ -7,7 +7,8 @@
 	<div class="grid grid-cols-3 gap-3">
 		{% for item in items %}
 		<div>
-			<a href="#">
+		<a href="{% url 'item:detail' item.id %}"> <!-- The item.id is the key passed here -->
+			<!-- Can't stress enough on how item in item:detail is the name space that we mentioned-->
 				<div>
 					<img src="{{ item.image.url }}" class="rounded-t-xl">
 				</div>
