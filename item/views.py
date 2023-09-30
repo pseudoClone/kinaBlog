@@ -5,6 +5,9 @@ from .models import Item
 def detail(request, pk):    #Pk is the primary key argument
     item = get_object_or_404(Item, pk = pk)
 
+    related_items = Item.objects.filter(category = item.category, isSold = False).exclude(pk = pk)[0:3]
+
     return render(request,'item/detail.html',{
-        'item':item
+        'item':item,
+        'related_items': related_items
         })

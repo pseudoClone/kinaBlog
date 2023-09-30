@@ -23,15 +23,20 @@
 	</div>
 </div>
 <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
-	<h2 class="mb-12 text-2xl text-center">Categories</h2>
+	<h2 class="mb-12 text-2xl text-center">Related Items</h2>
 
 	<div class="grid grid-cols-3 gap-3">
-		{% for category in categories %}
+		{% for item in related_items %}
 		<div>
-			<a href="#">
+		<a href="{% url 'item:detail' item.id %}"> <!-- The item.id is the key passed here -->
+			<!-- Can't stress enough on how item in item:detail is the name space that we mentioned-->
+				<div>
+					<img src="{{ item.image.url }}" class="rounded-t-xl">
+				</div>
+
 				<div class="p-6 bg-white rounded-b-xl">
-					<h2 class="text-2xl">{{ category.name }}</h2>
-					<p class="text-gray-500">{{ category.items.count }} items</p>
+					<h2 class="text-2xl">{{ item.name }}</h2>
+					<p class="text-gray-500">Price: {{ item.price }}</p>
 				</div>
 			</a>
 		</div>
@@ -41,4 +46,3 @@
 
 {% endblock %}
 {% block title %}Welcome{% endblock %}
-
