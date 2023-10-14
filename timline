@@ -12,3 +12,6 @@
 - make models and use CASCADE to denote the deletion of one entity deletes the records of conncted entity
 - also return something from the models class that is useful. Meaning something that is recognizable in the admin page. Like a name
 - add the model class to the admin.py file to make it accesssible to admin site
+- at this point if you go to the server and check the Posts link, it will give error. That's because the changes have not been migrated
+- first makemigrations then migrate
+- since self.author is an object enclose it in a string convertor
