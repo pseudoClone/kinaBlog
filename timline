@@ -9,3 +9,5 @@
 - in the module(the blog in this case), make a function that returns the rendered template for the page
 - make the home page in the {module_name}/templates folder
 - import django.contrib.auth.model to connenct to the users/user
+- make models and use CASCADE to denote the deletion of one entity deletes the records of conncted entity
+- also return something from the models class that is useful. Meaning something that is recognizable in the admin page. Like a name
