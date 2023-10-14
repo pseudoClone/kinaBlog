@@ -1,0 +1,7 @@
+- Create project
+- migrate server
+- test if server is running
+- create superuser
+- add the name of the admin from the admin panel for future use
+- make a new app
+- enter the app in the INSTALLED_APPS section
