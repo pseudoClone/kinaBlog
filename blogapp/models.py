@@ -9,4 +9,4 @@ class Post(models.Model):
     body = models.TextField()
 
     def __str__(self):
-        return self.title + ' | ' + self.author # This shows up in the admin page
+        return self.title + ' | ' + str(self.author) # This shows up in the admin page
