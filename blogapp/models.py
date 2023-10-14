@@ -1,3 +1,3 @@
 from django.db import models
-
-# Create your models here.
+# Now lets connect to the user that we just created(i.e admin)
+from django.contrib.auth.model import User
