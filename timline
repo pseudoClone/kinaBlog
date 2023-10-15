@@ -15,3 +15,7 @@
 - at this point if you go to the server and check the Posts link, it will give error. That's because the changes have not been migrated
 - first makemigrations then migrate
 - since self.author is an object enclose it in a string convertor
+- make use of class based views in views.py for easy model view interop
+- while making templates the ListView and DetailView must be imported to the views.py
+- and while making the template, make sure to loop throught the object_list in the html
+- since we are now using class based views, urlpatters won't work anymore
