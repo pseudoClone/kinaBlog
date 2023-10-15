@@ -19,3 +19,4 @@
 - while making templates the ListView and DetailView must be imported to the views.py
 - and while making the template, make sure to loop throught the object_list in the html
 - since we are now using class based views, urlpatters won't work anymore
+- make sure to import Post model into your views
