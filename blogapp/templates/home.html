@@ -7,6 +7,13 @@
 		<!--<link href="css/style.css" rel="stylesheet">-->
 	</head>
 	<body>
-	<h1>Hello World!</h1>
+		<h1>Hello World!</h1>
+		<ul>
+			{% for postx in object_list %} <!--Object_list is the query set from the database which is the posts in this case-->
+			<li>{{ postx.title }} --|| {{ postx.author }}</li><br>
+
+			{{ post.body }}
+			{% end %}
+		<ul>
 	</body>
 </html>
