@@ -7,10 +7,11 @@
 		<!--<link href="css/style.css" rel="stylesheet">-->
 	</head>
 	<body>
-		<h1>Hello World!</h1>
+		<h1>PseudoBlog</h1>
+		<hr>
 		<ul>
 			{% for postx in object_list %} <!--Object_list is the query set from the database which is the posts in this case-->
-			<li>{{ postx.title }} --|| {{ postx.author.first_name }} {{postx.author.last_name}}<br>
+			<li><a href="{% url 'article-detail' postx.pk%}">{{ postx.title }} --|| {{ postx.author.first_name }} {{postx.author.last_name}}</a><br> <!-- Since we named article-detail in the urls.py-->
 
 			{{ postx.body }}
 			{% endfor %}
