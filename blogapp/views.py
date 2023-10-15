@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView #List in hugo listTemplates and viewTemplate
-
+from .models import Post
 # Will be using class based views from now on
 
 #def home(request):
