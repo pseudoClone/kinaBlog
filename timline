@@ -1,3 +1,5 @@
+# Initial
+=============
 - Create project
 - migrate server
 - test if server is running
@@ -20,3 +22,8 @@
 - and while making the template, make sure to loop throught the object_list in the html
 - since we are now using class based views, urlpatters won't work anymore
 - make sure to import Post model into your views
+
+# Bootstrap - Prettier
+- thinking of using the starter template from the bootstrap website
+- but before make a base.html that has the starter template.
+- make a django templating block in the base.html and extend it to other html of the project
