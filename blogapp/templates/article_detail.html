@@ -1,18 +1,24 @@
+{% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title></title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% block title %}
+		{{post.title}}
+		{% endblock %}
 	</head>
 	<body>
+		{% block content %}
 		{{ post.title }}
 		<br>
 		<small>By: {{post.author.first_name}} {{ post.author.last_name }}</small>
 		<hr>
 		{{post.body}}
 		<br>
-			<a href="{% url 'home'%}">Back</a>
+		<a href="{% url 'home'%}" class = "btn btn-secondary">Back</a>
 		<br>
 	</body>
 </html>
+{% endblock %}
