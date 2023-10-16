@@ -27,3 +27,7 @@
 - thinking of using the starter template from the bootstrap website
 - but before make a base.html that has the starter template.
 - make a django templating block in the base.html and extend it to other html of the project
+- make the tile extend from base too.
+- make some navabars and shii
+- make some back buttons
+- also make the title dynamic i.e name of the blog on title using templates
