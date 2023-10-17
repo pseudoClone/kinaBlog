@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView #List in hugo listTemplates and viewTemplate
+from django.views.generic import ListView, DetailView, CreateView #List in hugo listTemplates and viewTemplate
 from .models import Post
 # Will be using class based views from now on
 
@@ -13,3 +13,8 @@ class HomeView(ListView):
 class ArticleDetailView(DetailView):
     model = Post
     template_name = 'article_detail.html'
+
+class AddPostView(CreateView):
+    model = Post
+    template_name = 'add_post.html'
+    fields = '__all__' # This makes the class use all fields from the post model we created
