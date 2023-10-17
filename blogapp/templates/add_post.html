@@ -3,5 +3,9 @@
 <h1>
 	Add Blog Post
 </h1>
+<form method = "POST">
+	{% csrf_token %} <!-- Protection against cross site request forgery -->
+	{{ form.as_p }} <!-- This will render them wrapped in <p> tags -->
+	<button class = "btn btn-primary">Post</button>
 
 {% endblock %}
