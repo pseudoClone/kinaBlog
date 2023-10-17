@@ -13,5 +13,5 @@ class Post(models.Model):
         return self.title + ' | ' + str(self.author) # This shows up in the admin page
 
     def get_absolute_url(self):
-        return reverse('article-detail', args = (str(self.id))) # Pointing to the location to go after posting
+        return reverse('home') # Pointing to the location to go after posting
     # Every post has an id so this function asks for one more argument i.e the id
