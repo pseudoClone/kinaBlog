@@ -7,9 +7,11 @@
 {% block title %}
 Add a new post..
 {% endblock %}
-<form method = "POST">
-	{% csrf_token %} <!-- Protection against cross site request forgery -->
-	{{ form.as_p }} <!-- This will render them wrapped in <p> tags -->
-	<button class = "btn btn-primary">Post</button>
+<table>
+	<form method = "POST">
+		{% csrf_token %} <!-- Protection against cross site request forgery -->
+		{{ form.as_table }} <!-- This will render them wrapped in <p> tags -->
+		<button class = "btn btn-primary">Post</button>
+</table>
 
-	{% endblock %}
+{% endblock %}
