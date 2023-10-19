@@ -13,12 +13,18 @@
 		<hr>
 		<ul>
 			{% for postx in object_list %} <!--Object_list is the query set from the database which is the posts in this case-->
-			<li><a href="{% url 'article-detail' postx.pk%}">{{ postx.title }} --|| {{ postx.author.first_name }} {{postx.author.last_name}}</a><br> <!-- Since we named article-detail in the urls.py-->
+			<li>
+				<a href="{% url 'article-detail' postx.pk%}">
+					{{ postx.title }} --||
+					 {{ postx.author.first_name }}
+					 {{postx.author.last_name}}<!-- Since we named article-detail in the urls.py-->
+				</a> - <a href="{% url 'edit_post' postx.pk%}">Edit post</a>
+				<br> 
 
-			{{ postx.body }}
+				{{ postx.body }}
 			{% endfor %}
 			</li>
-		<ul>
+			<ul>
 	</body>
 </html>
 
