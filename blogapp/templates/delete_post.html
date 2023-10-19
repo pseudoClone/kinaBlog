@@ -1,0 +1,23 @@
+{% extends "base.html" %}}
+{% block title %}
+Delete your post..
+{% endblock %}
+{% block content %}
+<br>
+<div class = "form-group bg-dark">
+	<form method = "POST">
+		{% csrf_token %} <!-- Protection against cross site request forgery -->
+		<div>
+		<div class="card">
+			<div class="card-header bg-dark text-white">
+				<bold> Delete </bold>
+			</div>
+			<div class="card-body bg-dark text-white">
+				<h5 class="card-title bg-dark text-white">Delete <a href = "{% url 'article-detail' post.pk %}">Post</a>?</h5>
+				<p class="card-text">Are you sure you want to do this?</p>
+				<a href="#" class="btn btn-danger">Yes</a>
+			</div>
+		</div>
+		</div>
+</div>
+{% endblock %}
