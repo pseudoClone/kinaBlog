@@ -18,7 +18,7 @@
 					{{ postx.title }} --||
 					 {{ postx.author.first_name }}
 					 {{postx.author.last_name}}<!-- Since we named article-detail in the urls.py-->
-				</a> - <a href="{% url 'edit_post' postx.pk%}">Edit post</a>
+				</a> - <a href="{% url 'edit_post' postx.pk%}"><small>(Edit)</small></a>
 				<br> 
 
 				{{ postx.body }}
