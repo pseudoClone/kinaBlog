@@ -34,3 +34,4 @@
 - can't track changes because I put files in wrong directories, but check the last 5 commits for this 
 - remember that the object_list for home.html is 'postx' and the for other pages is just 'post'
 - use UpdateView for updating the created Views
+- Remember that you cannot use fields and form_class in the same file i.e views (Its redundant)
