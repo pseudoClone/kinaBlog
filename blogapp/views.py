@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView,UpdateView #List in hugo listTemplates and viewTemplate
+from django.views.generic import ListView, DetailView, CreateView,UpdateView, DeleteView #List in hugo listTemplates and viewTemplate
 from .models import Post
 from .forms import PostForm, EditForm
 # Will be using class based views from now on
@@ -28,3 +28,7 @@ class UpdatePostView(UpdateView):
     # Never use form_class with fields
     #fields = ['title', 'title_tag', 'body'] # Changing author does not make sense and yes security
     form_class = EditForm
+
+class DeletePostView(DeleteView):
+    model = Post
+    template_name = 'delete_post.html'
