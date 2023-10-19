@@ -35,3 +35,6 @@
 - remember that the object_list for home.html is 'postx' and the for other pages is just 'post'
 - use UpdateView for updating the created Views
 - Remember that you cannot use fields and form_class in the same file i.e views (Its redundant)
+
+# Undefined Behaviour
+- Now deleting post is done by delete button but it never points to deletion, its just a button
