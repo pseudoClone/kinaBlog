@@ -14,7 +14,9 @@
 		{{ post.title }}
 		<br>
 		<small>By: {{post.author.first_name}} {{ post.author.last_name }} : {{post.post_date}}</small>
+		{% if user.is_authenticated %}
 		<br><small><a href = "{% url 'edit_post' post.pk %}"> Edit</a></small>
+		{% endif %}
 		<hr>
 		{{post.body}}
 		<br>

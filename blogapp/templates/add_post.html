@@ -1,4 +1,5 @@
 {% extends "base.html" %}}
+{% if user.is_authenticated %}
 {% block title %}
 Add Post..
 {% endblock %}
@@ -10,3 +11,4 @@ Add Post..
 		<button class = "btn btn-primary">Post</button>
 </div>
 {% endblock %}
+{% endif %}

@@ -2,6 +2,7 @@
 {% block title %}
 Edit your post..
 {% endblock %}
+{% if user.is_authenticated %}
 {% block content %}
 <div class = "form-group">
 	<form method = "POST">
@@ -10,3 +11,4 @@ Edit your post..
 		<button class = "btn btn-primary">Done</button>
 </div>
 {% endblock %}
+{% endif %}
