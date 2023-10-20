@@ -24,6 +24,7 @@
 - make sure to import Post model into your views
 
 # Bootstrap - Prettier
+==========================
 - thinking of using the starter template from the bootstrap website
 - but before make a base.html that has the starter template.
 - make a django templating block in the base.html and extend it to other html of the project
@@ -37,8 +38,14 @@
 - Remember that you cannot use fields and form_class in the same file i.e views (Its redundant)
 
 # Undefined Behaviour
+===========================
 - Now deleting post is done by delete button but it never points to deletion, its just a button
 
 # Posts
+===========================
 - For ordering by date, just add a date field in the models and set it to auto populate.
 - Then, ordering can be done in ListView by setting the ordering variable to the field that you want
+
+# User Authentication
+===========================
+- Better to create a new app for authentication stuff
