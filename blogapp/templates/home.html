@@ -16,14 +16,15 @@
 			<li>
 				<a href="{% url 'article-detail' postx.pk%}">
 					{{ postx.title }} --||
-					 {{ postx.author.first_name }}
-					 {{postx.author.last_name}}<!-- Since we named article-detail in the urls.py-->
-				</a> - <a href="{% url 'edit_post' postx.pk%}"><small>(Edit)</small></a>
-				- <a href="{% url 'delete_post' postx.pk%}"><small>(Delete)</small></a>
-				<br> 
+					{{ postx.author.first_name }}
+					{{postx.author.last_name}}<!-- Since we named article-detail in the urls.py-->
+				</a>				<br> 
 
 				{{ postx.body }}
-			{% endfor %}
+				<a href="{% url 'edit_post' postx.pk%}"><small>(Edit)</small></a>
+				<a href="{% url 'delete_post' postx.pk%}"><small>(Delete)</small></a>
+
+				{% endfor %}
 			</li>
 			<ul>
 	</body>
